@@ -62,6 +62,7 @@ static const char *dmenucmd[] = { "/home/celeb/.local/bin/dmenu-run-color", NULL
 static const char *termcmd[]  = { "st", NULL };
 static const char *volume_up[] = {"x-audio", "sink", "--plus"};
 static const char *volume_down[] = {"x-audio", "sink", "--minus"};
+static const char *slockcmd[] = { "slock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -88,8 +89,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  spawn,          {.v = volume_down } },
-	{ MODKEY,                       XK_equal,  spawn,          {.v = volume_up } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -100,6 +99,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY,                       XK_minus,  spawn,          {.v = volume_down } },
+	{ MODKEY,                       XK_equal,  spawn,          {.v = volume_up } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 };
 
 /* button definitions */
