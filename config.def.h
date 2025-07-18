@@ -62,6 +62,7 @@ static const char *dmenucmd[] = { "/home/celeb/.local/bin/dmenu-run-color", NULL
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *volume_up[] = {"x-audio", "sink", "--plus"};
 static const char *volume_down[] = {"x-audio", "sink", "--minus"};
+static const char *hibecmd[] = { "/home/celeb/.local/bin/dwmhibe", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *screenshot_cmd[] = { "sh", "-c", "maim -s ~/Pictures/$(date +%s).png", NULL };
 static const char *screenshot_clip[] = { "sh", "-c", "maim -s | xclip -selection clipboard -t image/png", NULL };
@@ -72,6 +73,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_minus,  spawn,          {.v = volume_down } },
 	{ MODKEY,                       XK_equal,  spawn,          {.v = volume_up } },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = hibecmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshot_cmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = screenshot_clip } },
@@ -105,7 +107,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
 };
 
