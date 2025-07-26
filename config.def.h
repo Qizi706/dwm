@@ -68,6 +68,7 @@ static const char *hibecmd[] = { "/home/celeb/.local/bin/dwmhibe", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *screenshot_cmd[] = { "sh", "-c", "maim -s ~/Pictures/$(date +%s).png", NULL };
 static const char *screenshot_clip[] = { "sh", "-c", "maim -s | xclip -selection clipboard -t image/png", NULL };
+static const char *boomercmd[] = { "boomer", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -79,7 +80,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshot_cmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = screenshot_clip } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_b,      spawn,          {.v = boomercmd } },
+	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
