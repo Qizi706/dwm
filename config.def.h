@@ -31,7 +31,7 @@ static const Rule rules[] = {
 	{ "firefox",        NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "mihomo-party",   NULL,       NULL,       1 << 8,       1,           -1 },
 	{ "wechat",         NULL,       NULL,       1 << 2,       1,           -1 },
-	{ "qq",             NULL,       NULL,       1 << 2,       1,           -1 },
+	{ "QQ",             NULL,       NULL,       1 << 2,       1,           -1 },
 };
 
 /* layout(s) */
