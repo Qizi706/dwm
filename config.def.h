@@ -30,6 +30,8 @@ static const Rule rules[] = {
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "firefox",        NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "mihomo-party",   NULL,       NULL,       1 << 8,       1,           -1 },
+	{ "wechat",         NULL,       NULL,       1 << 2,       1,           -1 },
+	{ "qq",             NULL,       NULL,       1 << 2,       1,           -1 },
 };
 
 /* layout(s) */
@@ -59,7 +61,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "/home/celeb/.local/bin/dmenu-run-color", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *volume_up[] = {"x-audio", "sink", "--plus"};
 static const char *volume_down[] = {"x-audio", "sink", "--minus"};
 static const char *hibecmd[] = { "/home/celeb/.local/bin/dwmhibe", NULL };
